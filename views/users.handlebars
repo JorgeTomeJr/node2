@@ -1,0 +1,10 @@
+{{# with user}} <!--com o objeto user criado no index.js-->
+    <h1>{{upperCase nome}}</h1><!--função criada na pasta helpers, codigo js-->
+    <h2>{{email}}</h2>
+{{/ with}}
+
+{{# if auth }}<!--está verificando se é true our not-->
+    <p>Você está logado.Seja bem vindo</p>
+{{else}}
+    {{> login-form}}<!--importando o arquivo login-form da pasta partials-->
+{{/ if}}    
